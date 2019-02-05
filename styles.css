@@ -2,36 +2,65 @@
   box-sizing: border-box;
 }
 body {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  align-items: center;
-  background-color: #9c344c;
+  align-items: center; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  background-color: #71aa97;
+}
+header {
+  grid-column: 2;
+  grid-row: 1;
 }
 h1 {
-  color: blueviolet;
+  color: #b0df95;
+  font-family: "Indie Flower", cursive;
+  font-size: 65px;
+  text-align: center;
   /* text-orientation: sideways; */
+}
+aside {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  justify-content: space-around; */
+  display: inherit;
+  grid-row: 1;
+  grid-column: 1;
+}
+h2 {
+  color: #b0df95;
+  font-family: "Indie Flower", cursive;
+  font-size: 55px;
+  text-align: center;
+  display: inherit;
 }
 main {
   margin: 0 auto;
   display: grid;
+  grid-row: 2;
+  grid-column: 2;
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(2, 1fr);
 }
 .square {
-  height: 220px;
-  width: 220px;
-  background-color: #ffc7aa;
-  border: 0.5px solid black;
+  height: 120px;
+  width: 120px;
+  background-color: #267158;
+  border: 0.5px solid #003926;
   border-radius: 18px;
-  margin: 50px;
+  margin: 30px;
+  filter: drop-shadow(8px 8px 8px #003926);
 }
 .two {
-  background-color: #4e0012;
+  background-color: #356f13;
 }
 .three {
-  background-color: #71aa97;
+  background-color: #478d76;
 }
 .four {
-  background-color: #ea9cae;
+  background-color: #0e553e;
 }
 /* font-family: 'Indie Flower', cursive; */
