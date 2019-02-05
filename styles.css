@@ -1,3 +1,21 @@
+* {
+  box-sizing: border-box;
+}
 h1 {
   color: blueviolet;
+}
+.square {
+  height: 100px;
+  width: 100px;
+  background-color: #ffc7aa;
+  display: grid;
+}
+.two {
+  background-color: #4e0012;
+}
+.three {
+  background-color: #71aa97;
+}
+.four {
+  background-color: #ea9cae;
 }
