@@ -7,8 +7,10 @@ body {
   align-items: center; */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: 270px 500px;
   background-color: #71aa97;
+  /* grid-auto-rows: 270px;
+  grid-auto-columns: 270px; */
 }
 header {
   grid-column: 2;
@@ -30,6 +32,19 @@ aside {
   grid-row: 1;
   grid-column: 1;
 }
+p {
+  color: #b0df95;
+  font-family: "Indie Flower", cursive;
+  font-size: 40px;
+  text-align: right;
+  overflow-wrap: break-word;
+  width: 300px;
+}
+.leftSide {
+  display: inherit;
+  grid-row: 1;
+  grid-column: 3;
+}
 h2 {
   color: #b0df95;
   font-family: "Indie Flower", cursive;
@@ -46,8 +61,8 @@ main {
   grid-template-columns: repeat(2, 1fr);
 }
 .square {
-  height: 120px;
-  width: 120px;
+  height: 200px;
+  width: 200px;
   background-color: #267158;
   border: 0.5px solid #003926;
   border-radius: 18px;
