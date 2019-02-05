@@ -1,14 +1,29 @@
 * {
   box-sizing: border-box;
 }
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #9c344c;
+}
 h1 {
   color: blueviolet;
+  /* text-orientation: sideways; */
+}
+main {
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
 .square {
-  height: 100px;
-  width: 100px;
+  height: 220px;
+  width: 220px;
   background-color: #ffc7aa;
-  display: grid;
+  border: 0.5px solid black;
+  border-radius: 18px;
+  margin: 50px;
 }
 .two {
   background-color: #4e0012;
@@ -19,3 +34,4 @@ h1 {
 .four {
   background-color: #ea9cae;
 }
+/* font-family: 'Indie Flower', cursive; */
