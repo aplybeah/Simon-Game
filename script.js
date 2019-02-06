@@ -19,14 +19,8 @@ function getNum() {
 // link random integer to array index
 var x = getNum();
 console.log(x);
-
-console.log(boxSwitch.length);
-// for (i = 0; i < 10; i++) {
-//     function addBox() {
-//     return boxSwitch.push(x);
-//   }
-// }
-// console.log(boxSwitch.push(1));
+boxSwitch.push(x);
+console.log(boxSwitch);
 //use switch statement?
 // switch()
 // one.addEventListener("click", function(e) {
