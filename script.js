@@ -24,23 +24,19 @@ function playerCheck() {
 //remove event listener
 function actBox1() {
   one.classList.toggle("active");
-  timer(actBox1, 300);
 }
 function actBox2() {
   two.classList.toggle("active");
-  timer(actBox2, 300);
 }
 function actBox3() {
   three.classList.toggle("active");
-  timer(actBox3, 300);
 }
 function actBox4() {
   four.classList.toggle("active");
-  timer(actBox4, 300);
 }
 function timer() {
   setTimeout(timer, 300);
-  // actBox1();
+  actBox1();
   // console.log("hey");
   //recursion function
 }
