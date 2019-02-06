@@ -6,6 +6,7 @@ let two = document.querySelector(".two");
 let three = document.querySelector(".three");
 let four = document.querySelector(".four");
 var start = document.querySelector(".start-button");
+var reset = document.querySelector(".reset");
 
 //when index is called, do something
 //have scorecard change with index.html
@@ -17,6 +18,7 @@ function playerCheck() {
     console.log("issa match");
   }
 }
+//remove event listener
 function actBox1() {
   one.classList.toggle("active");
 }
@@ -31,8 +33,15 @@ function actBox4() {
 }
 // var sequence = boxSwitch.filter() ask about this
 //setTimeout
-function loopIterate() {}
-
+reset.addEventListener("click", function(e) {
+  boxSwitch = [];
+  one.classList.remove("active");
+  two.classList.remove("active");
+  three.classList.remove("active");
+  four.classList.remove("active");
+  console.log("this is clicked");
+});
+//userinput
 start.addEventListener("click", function(e) {
   for (i = 0; i < 3; i++) {
     function getNum() {
@@ -43,22 +52,21 @@ start.addEventListener("click", function(e) {
     console.log(boxSwitch);
   }
   if (boxSwitch.length > 0 && boxSwitch[0] == 0) {
-    setTimeout(actBox1, 2000);
+    setTimeout(actBox1, 500);
     console.log("Checking the link");
   }
   if (boxSwitch.length > 0 && boxSwitch[0] == 1) {
-    setTimeout(actBox2, 2000);
+    setTimeout(actBox2, 500);
   }
   if (boxSwitch.length > 0 && boxSwitch[0] == 2) {
-    setTimeout(actBox3, 2000);
+    setTimeout(actBox3, 500);
   }
   if (boxSwitch.length > 0 && boxSwitch[0] == 3) {
-    setTimeout(actBox4, 2000);
+    setTimeout(actBox4, 500);
   }
 });
 
 //think in phases: Pattern, Player, NewRound
-//create method that compares my two arrays(strict comparison)
 //how to push user input into new array
 //relate .one .two .three .four to 0 1 2 3 in an array
 //research array positions and how to call them
