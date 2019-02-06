@@ -27,10 +27,15 @@ start.addEventListener("click", function(e) {
     // one.style.backgroundColor = "red";
     one.classList.toggle("active");
     console.log("Checking the link");
-  } else {
-    // setInterval(3000);
-    three.style.backgroundColor = "black";
-    console.log("Condition not met");
+  }
+  if (boxSwitch.length > 0 && boxSwitch[0] == 1) {
+    two.classList.toggle("active");
+  }
+  if (boxSwitch.length > 0 && boxSwitch[0] == 2) {
+    three.classList.toggle("active");
+  }
+  if (boxSwitch.length > 0 && boxSwitch[0] == 3) {
+    four.classList.toggle("active");
   }
 });
 // link random integer to array index
