@@ -80,12 +80,14 @@ main {
   color: #b0df95;
   grid-column: 2;
   grid-row: 2;
+  justify-self: center;
 }
 .reset {
   grid-row: 3;
 }
 .hard-mode {
   grid-row: 4;
+  width: 115px;
 }
 .square {
   height: 200px;
