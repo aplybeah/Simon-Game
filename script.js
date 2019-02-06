@@ -12,7 +12,10 @@ let four = document.querySelector(".four");
 //have timer change with index.html
 
 //when clicked, add box to an array which will check for correction
+
 for (i = 0; i < 10; i++) {
+  //put delay between iteration, or get it to stop and wait for input
+  setInterval(3000);
   function getNum() {
     return Math.floor(Math.random() * (4 - 0)) + 0;
   }
@@ -21,13 +24,26 @@ for (i = 0; i < 10; i++) {
   console.log(boxSwitch);
 }
 // link random integer to array index
-if (boxSwitch.length > 0 && boxSwitch[1] == 1) {
+if (boxSwitch.length > 0 && boxSwitch[0] == 1) {
+  one.style.backgroundColor = "red";
   console.log("Checking the link");
 } else {
+  three.style.backgroundColor = "black";
   console.log("Condition not met");
 }
+
 //use switch statement?
-// switch()
+// switch (boxSwitch.length > 0 && boxSwitch[x] == 1) {
+//   case boxSwitch[0]:
+//     console.log("testing the output");
+//     break;
+//   case boxSwitch[1]:
+//     console.log("this is case 2");
+//     break;
+//   default:
+//     console.log("this is the default");
+// }
+
 // one.addEventListener("click", function(e) {
 //   e.target.style.backgroundColor = "white";
 // });
