@@ -115,17 +115,7 @@ main {
   background-color: #0e553e;
 }
 
-.two.active {
-  background-color: white;
-}
-
-.one.active {
-  background-color: white;
-}
-.three.active {
-  background-color: white;
-}
-.four.active {
+.square.active {
   background-color: white;
 }
 /* font-family: 'Indie Flower', cursive; */

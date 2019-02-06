@@ -1,6 +1,7 @@
 let boxSwitch = [];
 let boxCheck = [];
 let scoreCard = 0;
+// let button = document.querySelectorAll(".square");
 let one = document.querySelector(".one");
 let two = document.querySelector(".two");
 let three = document.querySelector(".three");
@@ -31,7 +32,7 @@ function actBox3() {
 function actBox4() {
   four.classList.toggle("active");
 }
-// var sequence = boxSwitch.filter() ask about this
+
 //setTimeout
 reset.addEventListener("click", function(e) {
   boxSwitch = [];
@@ -41,7 +42,7 @@ reset.addEventListener("click", function(e) {
   four.classList.remove("active");
   console.log("this is clicked");
 });
-//userinput
+//userinput and recursion
 start.addEventListener("click", function(e) {
   for (i = 0; i < 3; i++) {
     function getNum() {
