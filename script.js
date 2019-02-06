@@ -12,6 +12,23 @@ var start = document.querySelector(".start-button");
 //have timer change with index.html
 
 //when clicked, add box to an array which will check for correction
+function playerCheck() {
+  if (boxSwitch === boxCheck) {
+    console.log("issa match");
+  }
+}
+function actBox1() {
+  one.classList.toggle("active");
+}
+function actBox2() {
+  two.classList.toggle("active");
+}
+function actBox3() {
+  three.classList.toggle("active");
+}
+function actBox4() {
+  four.classList.toggle("active");
+}
 
 start.addEventListener("click", function(e) {
   for (i = 0; i < 3; i++) {
@@ -23,28 +40,20 @@ start.addEventListener("click", function(e) {
     console.log(boxSwitch);
   }
   if (boxSwitch.length > 0 && boxSwitch[0] == 0) {
-    //use Math.random and setInterval functions to create random instances of square color
-    // one.style.backgroundColor = "red";
-    one.classList.toggle("active");
+    actBox1();
     console.log("Checking the link");
   }
   if (boxSwitch.length > 0 && boxSwitch[0] == 1) {
-    two.classList.toggle("active");
+    actBox2();
   }
   if (boxSwitch.length > 0 && boxSwitch[0] == 2) {
-    three.classList.toggle("active");
+    actBox3();
   }
   if (boxSwitch.length > 0 && boxSwitch[0] == 3) {
-    four.classList.toggle("active");
+    actBox4();
   }
 });
-// link random integer to array index
-function playerCheck() {
-  if (boxSwitch === boxCheck) {
-    console.log("issa match");
-  }
-}
-//work with callback toggle
+
 //think in phases: Pattern, Player, NewRound
 //create method that compares my two arrays(strict comparison)
 //how to push user input into new array
