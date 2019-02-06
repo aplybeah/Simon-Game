@@ -1,7 +1,7 @@
 let boxSwitch = [];
 let boxCheck = [];
 let scoreCard = 0;
-// let button = document.querySelectorAll(".square");
+// let button = document.querySelectorAll(".Square");
 let one = document.querySelector(".one");
 let two = document.querySelector(".two");
 let three = document.querySelector(".three");
@@ -32,10 +32,17 @@ function actBox3() {
 function actBox4() {
   four.classList.toggle("active");
 }
+function timer() {
+  setTimeout(timer, 300);
+  actBox1();
+  console.log("hey");
+  //recursion function
+}
 
 //setTimeout
 reset.addEventListener("click", function(e) {
   boxSwitch = [];
+  // button.classList.remove("active");
   one.classList.remove("active");
   two.classList.remove("active");
   three.classList.remove("active");
@@ -54,17 +61,39 @@ start.addEventListener("click", function(e) {
   }
   if (boxSwitch.length > 0 && boxSwitch[0] == 0) {
     setTimeout(actBox1, 500);
+    // timer(boxSwitch);
     console.log("Checking the link");
   }
   if (boxSwitch.length > 0 && boxSwitch[0] == 1) {
     setTimeout(actBox2, 500);
+    // timer(boxSwitch);
   }
   if (boxSwitch.length > 0 && boxSwitch[0] == 2) {
     setTimeout(actBox3, 500);
+    // timer(boxSwitch);
   }
   if (boxSwitch.length > 0 && boxSwitch[0] == 3) {
     setTimeout(actBox4, 500);
+    // timer(boxSwitch);
   }
+});
+
+//Player input below
+one.addEventListener("click", function(e) {
+  boxCheck.push(0);
+  console.log(boxCheck);
+});
+two.addEventListener("click", function(e) {
+  boxCheck.push(1);
+  console.log(boxCheck);
+});
+three.addEventListener("click", function(e) {
+  boxCheck.push(2);
+  console.log(boxCheck);
+});
+four.addEventListener("click", function(e) {
+  boxCheck.push(3);
+  console.log(boxCheck);
 });
 
 //think in phases: Pattern, Player, NewRound
