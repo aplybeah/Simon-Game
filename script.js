@@ -44,6 +44,7 @@ function timer() {
 //setTimeout
 reset.addEventListener("click", function(e) {
   boxSwitch = [];
+  boxCheck = [];
   // button.classList.remove("active");
   one.classList.remove("active");
   two.classList.remove("active");
@@ -72,6 +73,11 @@ start.addEventListener("click", function(e) {
   }
   if (boxSwitch.length > 0 && boxSwitch[0] == 3) {
     setTimeout(actBox4, 500);
+  }
+  if (boxSwitch.length === boxCheck.length) {
+    if (boxSwitch === boxCheck) {
+      console.log("issa match");
+    }
   }
 });
 
