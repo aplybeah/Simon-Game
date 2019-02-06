@@ -29,6 +29,9 @@ function actBox3() {
 function actBox4() {
   four.classList.toggle("active");
 }
+// var sequence = boxSwitch.filter() ask about this
+//setTimeout
+function loopIterate() {}
 
 start.addEventListener("click", function(e) {
   for (i = 0; i < 3; i++) {
@@ -40,17 +43,17 @@ start.addEventListener("click", function(e) {
     console.log(boxSwitch);
   }
   if (boxSwitch.length > 0 && boxSwitch[0] == 0) {
-    actBox1();
+    setTimeout(actBox1, 2000);
     console.log("Checking the link");
   }
   if (boxSwitch.length > 0 && boxSwitch[0] == 1) {
-    actBox2();
+    setTimeout(actBox2, 2000);
   }
   if (boxSwitch.length > 0 && boxSwitch[0] == 2) {
-    actBox3();
+    setTimeout(actBox3, 2000);
   }
   if (boxSwitch.length > 0 && boxSwitch[0] == 3) {
-    actBox4();
+    setTimeout(actBox4, 2000);
   }
 });
 

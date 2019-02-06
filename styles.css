@@ -89,6 +89,12 @@ main {
   grid-row: 4;
   width: 115px;
 }
+.start-button:hover,
+.reset:hover,
+.hard-mode:hover {
+  background-color: #b0df95;
+  color: #71aa97;
+}
 .square {
   height: 200px;
   width: 200px;
