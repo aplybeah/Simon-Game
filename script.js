@@ -12,17 +12,17 @@ let four = document.querySelector(".four");
 //have timer change with index.html
 
 //when clicked, add box to an array which will check for correction
-
-function getNum() {
-  return Math.floor(Math.random() * (8 - 0)) + 0;
+for (i = 0; i < 10; i++) {
+  function getNum() {
+    return Math.floor(Math.random() * (8 - 0)) + 0;
+  }
+  var x = getNum();
+  console.log(x);
+  boxSwitch.push(x);
+  console.log(boxSwitch);
 }
 // link random integer to array index
-var x = getNum();
-console.log(x);
-boxSwitch.push(x);
-console.log(boxSwitch);
-boxSwitch.forEach;
-//use forEach
+
 //use switch statement?
 // switch()
 // one.addEventListener("click", function(e) {
