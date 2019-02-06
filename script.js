@@ -21,6 +21,8 @@ var x = getNum();
 console.log(x);
 boxSwitch.push(x);
 console.log(boxSwitch);
+boxSwitch.forEach;
+//use forEach
 //use switch statement?
 // switch()
 // one.addEventListener("click", function(e) {
