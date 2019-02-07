@@ -1,6 +1,7 @@
 let boxSwitch = [];
 let boxCheck = [];
 let scoreCard = 0;
+let score = document.querySelector(".score");
 // let button = document.querySelectorAll(".Square");
 let one = document.querySelector(".one");
 let two = document.querySelector(".two");
@@ -91,11 +92,15 @@ function linkAttempt(x) {
     actBox4();
   }
 }
-//Player input below
+function addScore() {
+  scoreCard += 1;
+  score.innerHTML = scoreCard;
+}
 //array.length
 function playerCheck() {
-  if (boxSwitch.length === 3 && boxCheck.length === 3) {
+  if (boxSwitch.length > 2 && boxCheck.length > 2) {
     if (boxSwitch.indexOf(i) === boxCheck.indexOf(i)) {
+      addScore();
       console.log("its a match");
     } else {
       console.log("wrong");
@@ -123,8 +128,5 @@ four.addEventListener("click", function(e) {
   playerCheck();
   console.log(boxCheck);
 });
-
-//when clicked, add box to an array which will check for correction
-//think in phases: Pattern, Player, NewRound
 
 //getNum code from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random#Getting_a_random_integer_between_two_values
