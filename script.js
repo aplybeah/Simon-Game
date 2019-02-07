@@ -16,106 +16,107 @@ var reset = document.querySelector(".reset");
 //remove event listener
 function actBox1() {
   one.classList.toggle("active");
-  setTimeout(actBox1, 300);
+  // timer();
+  setTimeout(actBox1, 500);
 }
 function actBox2() {
   two.classList.toggle("active");
-  setTimeout(actBox2, 300);
+  // timer();
+  setTimeout(actBox2, 500);
 }
 function actBox3() {
   three.classList.toggle("active");
-  setTimeout(actBox3, 300);
+  // timer();
+  setTimeout(actBox3, 500);
 }
 function actBox4() {
   four.classList.toggle("active");
-  setTimeout(actBox4, 300);
+  // timer();
+  setTimeout(actBox4, 500);
 }
 function timer() {
-  setTimeout(timer, 300);
-  //   actBox1();
-  console.log("hey");
-  //   //recursion function
+  clock = setTimeout(timer, 300);
+  // console.log("hey");
 }
-
+function stopTimer() {
+  clearTimeout(clock);
+}
 //setTimeout
 reset.addEventListener("click", function(e) {
   boxSwitch = [];
   boxCheck = [];
-  // button.classList.remove("active");
   one.classList.remove("active");
   two.classList.remove("active");
   three.classList.remove("active");
   four.classList.remove("active");
+  // stopTimer();
+  // button.classList.remove("active");
   console.log("this is clicked");
 });
 //userinput and recursion
 start.addEventListener("click", function(e) {
   for (i = 0; i < 3; i++) {
     function getNum() {
+      playerCheck();
       return Math.floor(Math.random() * (4 - 0)) + 0;
     }
     var x = getNum();
-    // linkAttempt(x);
     boxSwitch.push(x);
     console.log(boxSwitch);
   }
-  // if (boxSwitch.length > 0 && boxSwitch[0] == 0) {
-  //   setTimeout(actBox1, 500);
-  // }
-  // if (boxSwitch.length > 0 && boxSwitch[0] == 1) {
-  //   setTimeout(actBox2, 500);
-  // }
-  // if (boxSwitch.length > 0 && boxSwitch[0] == 2) {
-  //   setTimeout(actBox3, 500);
-  // }
-  // if (boxSwitch.length > 0 && boxSwitch[0] == 3) {
-  //   setTimeout(actBox4, 500);
-  // }
+  boxSwitch.forEach(linkAttempt);
 });
-//while loop
-function linkAttempt(num) {
-  if (num == 0) {
-    actBox1();
-  } else if (num == 1) {
-    actBox2();
-  } else if (num == 2) {
-    actBox3();
-  } else if (num == 3) {
-    actBox4();
+
+function linkAttempt(x) {
+  // console.log("testing the forEach loop");
+  if (x == 0) {
+    // actBox1();
+    console.log("zero");
+  }
+  if (x == 1) {
+    // actBox2();
+    console.log("one");
+  }
+  if (x == 2) {
+    console.log("two");
+    // actBox3();
+  }
+  if (x == 3) {
+    console.log("three");
+    // actBox4();
+  }
+}
+//Player input below
+//array.length
+function playerCheck() {
+  if (boxSwitch.length === 3 && boxCheck.length === 3) {
+    boxSwitch[i] === boxCheck[i];
+    console.log("issa match");
   }
 }
 
-//Player input below
-//array.length
 one.addEventListener("click", function(e) {
   boxCheck.push(0);
+  playerCheck();
   console.log(boxCheck);
 });
 two.addEventListener("click", function(e) {
   boxCheck.push(1);
+  playerCheck();
   console.log(boxCheck);
 });
 three.addEventListener("click", function(e) {
   boxCheck.push(2);
+  playerCheck();
   console.log(boxCheck);
 });
 four.addEventListener("click", function(e) {
   boxCheck.push(3);
+  playerCheck();
   console.log(boxCheck);
 });
 
 //when clicked, add box to an array which will check for correction
-function playerCheck() {
-  if (boxSwitch.length === boxCheck.length) {
-    boxSwitch === boxCheck;
-    console.log("issa match");
-  } else {
-    console.log("Try again");
-  }
-}
 //think in phases: Pattern, Player, NewRound
-//how to push user input into new array
-//relate .one .two .three .four to 0 1 2 3 in an array
-//research array positions and how to call them
 
 //getNum code from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random#Getting_a_random_integer_between_two_values
