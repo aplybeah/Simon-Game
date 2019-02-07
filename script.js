@@ -61,27 +61,32 @@ start.addEventListener("click", function(e) {
       return Math.floor(Math.random() * (4 - 0)) + 0;
     }
     var x = getNum();
-    boxSwitch.push(x);
-    console.log(boxSwitch);
+    linkAttempt(x);
+    // boxSwitch.push(x);
+    // boxSwitch.forEach(linkAttempt);
   }
-  boxSwitch.forEach(linkAttempt);
+  console.log(boxSwitch);
 });
 
 function linkAttempt(x) {
   // console.log("testing the forEach loop");
   if (x == 0) {
     // actBox1();
+    boxSwitch.push(0);
     console.log("zero");
   }
   if (x == 1) {
     // actBox2();
+    boxSwitch.push(1);
     console.log("one");
   }
   if (x == 2) {
+    boxSwitch.push(2);
     console.log("two");
     // actBox3();
   }
   if (x == 3) {
+    boxSwitch.push(3);
     console.log("three");
     // actBox4();
   }
@@ -89,10 +94,14 @@ function linkAttempt(x) {
 //Player input below
 //array.length
 function playerCheck() {
-  if (boxSwitch.length === 3 && boxCheck.length === 3) {
-    boxSwitch[i] === boxCheck[i];
-    console.log("issa match");
-  }
+  // if (boxSwitch.length === 3 && boxCheck.length === 3) {
+  //   if (boxSwitch === boxCheck) {
+  //     //   if (boxSwitch !== boxCheck) {
+  //     console.log("its a match");
+  //   } else {
+  //     console.log("wrong");
+  //   }
+  // }
 }
 
 one.addEventListener("click", function(e) {
