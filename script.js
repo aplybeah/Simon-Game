@@ -13,43 +13,43 @@ var reset = document.querySelector(".reset");
 //have scorecard change with index.html
 //have timer change with index.html
 
-//remove event listener
 function actBox1() {
   one.classList.add("active");
-  // timer();
-  // setTimeout(actBox1, 500);
+  timer(actBox1);
+  // setTimeout(actBox1, 1500);
 }
 function actBox2() {
   two.classList.add("active");
-  // timer();
+  timer(actBox2);
   // setTimeout(actBox2, 500);
 }
 function actBox3() {
   three.classList.add("active");
-  // timer();
+  timer(actBox3);
   // setTimeout(actBox3, 500);
 }
 function actBox4() {
   four.classList.add("active");
-  // timer();
+  timer(actBox4);
   // setTimeout(actBox4, 500);
 }
 function timer() {
   clock = setTimeout(timer, 300);
+  clock;
   // console.log("hey");
 }
 function stopTimer() {
   clearTimeout(clock);
 }
-//setTimeout
+
 reset.addEventListener("click", function(e) {
+  stopTimer();
   boxSwitch = [];
   boxCheck = [];
   one.classList.remove("active");
   two.classList.remove("active");
   three.classList.remove("active");
   four.classList.remove("active");
-  // stopTimer();
   // button.classList.remove("active");
   console.log("this is clicked");
 });
@@ -94,14 +94,13 @@ function linkAttempt(x) {
 //Player input below
 //array.length
 function playerCheck() {
-  // if (boxSwitch.length === 3 && boxCheck.length === 3) {
-  //   if (boxSwitch === boxCheck) {
-  //     //   if (boxSwitch !== boxCheck) {
-  //     console.log("its a match");
-  //   } else {
-  //     console.log("wrong");
-  //   }
-  // }
+  if (boxSwitch.length === 3 && boxCheck.length === 3) {
+    if (boxSwitch.indexOf(i) === boxCheck.indexOf(i)) {
+      console.log("its a match");
+    } else {
+      console.log("wrong");
+    }
+  }
 }
 
 one.addEventListener("click", function(e) {
