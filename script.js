@@ -13,14 +13,6 @@ var reset = document.querySelector(".reset");
 //have scorecard change with index.html
 //have timer change with index.html
 
-//when clicked, add box to an array which will check for correction
-function playerCheck() {
-  if (boxSwitch.length === boxCheck.length) {
-    if (boxSwitch === boxCheck) {
-      console.log("issa match");
-    }
-  }
-}
 //remove event listener
 function actBox1() {
   one.classList.toggle("active");
@@ -38,12 +30,12 @@ function actBox4() {
   four.classList.toggle("active");
   setTimeout(actBox4, 300);
 }
-// function timer() {
-//   setTimeout(timer, 300);
-//   actBox1();
-//   // console.log("hey");
-//   //recursion function
-// }
+function timer() {
+  setTimeout(timer, 300);
+  //   actBox1();
+  console.log("hey");
+  //   //recursion function
+}
 
 //setTimeout
 reset.addEventListener("click", function(e) {
@@ -63,29 +55,38 @@ start.addEventListener("click", function(e) {
       return Math.floor(Math.random() * (4 - 0)) + 0;
     }
     var x = getNum();
+    // linkAttempt(x);
     boxSwitch.push(x);
     console.log(boxSwitch);
   }
-  if (boxSwitch.length > 0 && boxSwitch[0] == 0) {
-    setTimeout(actBox1, 500);
-  }
-  if (boxSwitch.length > 0 && boxSwitch[0] == 1) {
-    setTimeout(actBox2, 500);
-  }
-  if (boxSwitch.length > 0 && boxSwitch[0] == 2) {
-    setTimeout(actBox3, 500);
-  }
-  if (boxSwitch.length > 0 && boxSwitch[0] == 3) {
-    setTimeout(actBox4, 500);
-  }
-  if (boxSwitch.length === boxCheck.length) {
-    if (boxSwitch === boxCheck) {
-      console.log("issa match");
-    }
-  }
+  // if (boxSwitch.length > 0 && boxSwitch[0] == 0) {
+  //   setTimeout(actBox1, 500);
+  // }
+  // if (boxSwitch.length > 0 && boxSwitch[0] == 1) {
+  //   setTimeout(actBox2, 500);
+  // }
+  // if (boxSwitch.length > 0 && boxSwitch[0] == 2) {
+  //   setTimeout(actBox3, 500);
+  // }
+  // if (boxSwitch.length > 0 && boxSwitch[0] == 3) {
+  //   setTimeout(actBox4, 500);
+  // }
 });
+//while loop
+function linkAttempt(num) {
+  if (num == 0) {
+    actBox1();
+  } else if (num == 1) {
+    actBox2();
+  } else if (num == 2) {
+    actBox3();
+  } else if (num == 3) {
+    actBox4();
+  }
+}
 
 //Player input below
+//array.length
 one.addEventListener("click", function(e) {
   boxCheck.push(0);
   console.log(boxCheck);
@@ -102,6 +103,16 @@ four.addEventListener("click", function(e) {
   boxCheck.push(3);
   console.log(boxCheck);
 });
+
+//when clicked, add box to an array which will check for correction
+function playerCheck() {
+  if (boxSwitch.length === boxCheck.length) {
+    boxSwitch === boxCheck;
+    console.log("issa match");
+  } else {
+    console.log("Try again");
+  }
+}
 //think in phases: Pattern, Player, NewRound
 //how to push user input into new array
 //relate .one .two .three .four to 0 1 2 3 in an array
