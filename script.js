@@ -15,24 +15,24 @@ var reset = document.querySelector(".reset");
 
 //remove event listener
 function actBox1() {
-  one.classList.toggle("active");
+  one.classList.add("active");
   // timer();
-  setTimeout(actBox1, 500);
+  // setTimeout(actBox1, 500);
 }
 function actBox2() {
-  two.classList.toggle("active");
+  two.classList.add("active");
   // timer();
-  setTimeout(actBox2, 500);
+  // setTimeout(actBox2, 500);
 }
 function actBox3() {
-  three.classList.toggle("active");
+  three.classList.add("active");
   // timer();
-  setTimeout(actBox3, 500);
+  // setTimeout(actBox3, 500);
 }
 function actBox4() {
-  four.classList.toggle("active");
+  four.classList.add("active");
   // timer();
-  setTimeout(actBox4, 500);
+  // setTimeout(actBox4, 500);
 }
 function timer() {
   clock = setTimeout(timer, 300);
@@ -71,24 +71,24 @@ start.addEventListener("click", function(e) {
 function linkAttempt(x) {
   // console.log("testing the forEach loop");
   if (x == 0) {
-    // actBox1();
+    actBox1();
     boxSwitch.push(0);
     console.log("zero");
   }
   if (x == 1) {
-    // actBox2();
+    actBox2();
     boxSwitch.push(1);
     console.log("one");
   }
   if (x == 2) {
     boxSwitch.push(2);
     console.log("two");
-    // actBox3();
+    actBox3();
   }
   if (x == 3) {
     boxSwitch.push(3);
     console.log("three");
-    // actBox4();
+    actBox4();
   }
 }
 //Player input below
