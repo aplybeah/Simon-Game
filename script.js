@@ -10,7 +10,7 @@ let four = document.querySelector(".four");
 var start = document.querySelector(".start-button");
 var reset = document.querySelector(".reset");
 var turnCounter = 0;
-
+console.log(button[0]);
 // function actBox1() {
 //   one.classList.add("active");
 //   // timer(actBox1);
