@@ -67,3 +67,29 @@ in CSS, I played around a lot with various effects like filter.
 }
 <style>
 ```
+
+---
+
+## Reflection
+
+**What would you do differently?**
+If I were to redo this project I would spend more time writing psuedocode and understanding what I want my code to do first. At a certain point in this project, I began applying random methods in my code and hoping something works. This was not very time efficient.
+
+**What are you most proud of?**
+I was really proud of how my front-end looks. I really want to spend more time playing with CSS in the future.
+
+**What would you do next?**
+I plan to do a little more research on the `setTimeout` method and better ways to link things to my arrays visually.
+
+**How did you plan your project?**
+Coming in to this project, I started with wireframes and the overall appearance of my game. Then I made two lists: one with graded requirements, and one with things I believed that I needed. Throughout the project, I put the highest priority on the things that I knew how to do without any (or much) references. When I got to the challenging bits, I broke down what I wanted to do in psuedocode, before trying to find a code snippet that would fix the problem.
+
+**What did you learn?**
+One of the biggest things I learned from this project is that resting and taking breaks is better for the project in the long run than working straight through. I also gained a better grasp on operators and array methods in JS. I also learned that it's ok to delete massive chunks of code if they haven't been working for several commits now.
+
+## Contribution Guidelines
+
+I would love to hear about any improvements that can be made or bugs that were found. You can do that below:
+
+[Here is a link to the Simon Game main repo](https://github.com/aplybeah/Simon-Game)
+[Here is a link to the issue tracker](https://github.com/aplybeah/Simon-Game/issues)
