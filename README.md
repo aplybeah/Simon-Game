@@ -4,7 +4,7 @@ Project one
 
 ---
 
-##Description
+## Description
 
 For project one, I built a Simon Game. This game is supposed to give a pattern, and players are supposed to repeat that pattern.
 
@@ -14,19 +14,26 @@ This could be a screenshot of your project running in the browser (if it is a st
 
 ---
 
-##List of Features / User Stories
-###Bronze:(Currently have)
+## List of Features / User Stories
+
+### Bronze:(Currently have)
+
 This game has a linked scoreboard
 pattern checking
-###Silver:(Things I wish to add in the near future)
+
+### Silver:(Things I wish to add in the near future)
+
 Timer (it's already placed for now)
 Gold: (Things I plan to add once I have more knowledge)
-###Timer based scoring
+
+### Timer based scoring
+
 Challenge mode, with a longer starting sequence and more shapes to click.
 
 ---
 
-##List of Technologies Used
+## List of Technologies Used
+
 in JS, I used recursive functions, mainly where the timers were involved.
 
 ```js
