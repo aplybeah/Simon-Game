@@ -54,29 +54,71 @@ function timer() {
 
 reset.addEventListener("click", function(e) {
   location.reload(true);
-  // boxSwitch = [];
-  // boxCheck = [];
-  // one.classList.remove("active");
-  // two.classList.remove("active");
-  // three.classList.remove("active");
-  // four.classList.remove("active");
-  console.log("this is clicked");
 });
 //userinput and recursion
-start.addEventListener("click", function(e) {
+function addScore() {
+  scoreCard += 1;
+  score.innerHTML = scoreCard;
+}
+function wrongAnswer() {
+  scoreCard -= 1;
+  score.innerHTML = scoreCard;
+}
+
+function playerCheck() {
+  if (boxSwitch.length > 2 && boxCheck.length > 2) {
+    if (boxSwitch.indexOf(i) === boxCheck.indexOf(i)) {
+      // if (boxSwitch[i] === boxCheck[i]) {
+      addScore();
+      console.log("its a match");
+      turnCounter += 1;
+      console.log(turnCounter);
+      boxCheck = [];
+    } else {
+      wrongAnswer();
+      console.log("wrong");
+      turnCounter += 1;
+      console.log(turnCounter);
+      boxCheck = [];
+    }
+  }
+  return turnCounter;
+}
+function genArray() {
   for (i = 0; i < 3; i++) {
     function getNum() {
-      playerCheck();
       return Math.floor(Math.random() * (4 - 0)) + 0;
     }
+    playerCheck();
     var x = getNum();
     boxSwitch.push(x);
     linkAttempt(x);
+  }
+}
+function newTurn() {
+  if (turnCounter > 0) {
+    boxCheck = [];
+    genArray();
+    console.log(boxCheck);
+  }
+}
+
+start.addEventListener(
+  "click",
+  function(e) {
+    genArray();
+    // for (i = 0; i < 2; i++) {
+    //   function getNum() {
+    //     playerCheck();
+    //     return Math.floor(Math.random() * (4 - 0)) + 0;
+    //   }
+    //   var x = getNum();
+    //   boxSwitch.push(x);
     console.log(boxSwitch);
     // boxSwitch.forEach(linkAttempt);
   }
   // console.log(boxSwitch);
-});
+);
 
 function linkAttempt(x) {
   if (x == 0) {
@@ -102,36 +144,6 @@ function linkAttempt(x) {
     console.log("three");
     timer();
     // actBox4();
-  }
-}
-function addScore() {
-  scoreCard += 1;
-  score.innerHTML = scoreCard;
-}
-function wrongAnswer() {
-  scoreCard -= 1;
-  score.innerHTML = scoreCard;
-}
-
-function playerCheck() {
-  if (boxSwitch.length > 2 && boxCheck.length > 2) {
-    if (boxSwitch.indexOf(i) === boxCheck.indexOf(i)) {
-      // if (boxSwitch[i] === boxCheck[i]) {
-      addScore();
-      console.log("its a match");
-      turnCounter += 1;
-      console.log(turnCounter);
-    } else {
-      wrongAnswer();
-      console.log("wrong");
-      turnCounter += 1;
-      console.log(turnCounter);
-    }
-  }
-}
-function newTurn() {
-  if (turnCounter > 0) {
-    boxCheck = [];
   }
 }
 
