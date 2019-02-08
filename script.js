@@ -15,13 +15,16 @@ let t = 0;
 function timer() {
   if (t < 7) {
     button[0].classList.toggle("active");
-    button[1].classList.toggle("active");
-    button[2].classList.toggle("active");
-    button[3].classList.toggle("active");
+    // button[1].classList.toggle("active");
+    // button[2].classList.toggle("active");
+    // button[3].classList.toggle("active");
+    // button[i].classList.toggle("active");
     t++;
+    console.log(t);
     setTimeout(timer, 900);
   }
 }
+
 // function actBox1() {
 //   one.classList.add("active");
 //   // timer(actBox1);
@@ -66,7 +69,7 @@ function wrongAnswer() {
 }
 
 function playerCheck() {
-  if (boxSwitch.length > 2 && boxCheck.length > 2) {
+  if (boxSwitch.length > 2 && boxCheck.length === boxSwitch.length) {
     if (boxSwitch.indexOf(i) === boxCheck.indexOf(i)) {
       // if (boxSwitch[i] === boxCheck[i]) {
       addScore();
@@ -74,12 +77,10 @@ function playerCheck() {
       turnCounter += 1;
       console.log(turnCounter);
       boxCheck = [];
+      newTurn();
     } else {
       wrongAnswer();
-      console.log("wrong");
-      turnCounter += 1;
-      console.log(turnCounter);
-      boxCheck = [];
+      location.reload(true);
     }
   }
   return turnCounter;
@@ -93,6 +94,7 @@ function genArray() {
     var x = getNum();
     boxSwitch.push(x);
     linkAttempt(x);
+    console.log(boxSwitch);
   }
 }
 function newTurn() {
@@ -103,48 +105,33 @@ function newTurn() {
   }
 }
 
-start.addEventListener(
-  "click",
-  function(e) {
-    genArray();
-    // for (i = 0; i < 2; i++) {
-    //   function getNum() {
-    //     playerCheck();
-    //     return Math.floor(Math.random() * (4 - 0)) + 0;
-    //   }
-    //   var x = getNum();
-    //   boxSwitch.push(x);
-    console.log(boxSwitch);
-    // boxSwitch.forEach(linkAttempt);
-  }
-  // console.log(boxSwitch);
-);
+start.addEventListener("click", function(e) {
+  genArray();
+  console.log(boxSwitch);
+});
 
 function linkAttempt(x) {
-  if (x == 0) {
-    // actBox1();
-    timer();
-    // boxSwitch.push(0);
+  if (boxSwitch[0] == 0) {
+    button[0].classList.toggle("active");
+
     console.log("zero");
   }
-  if (x == 1) {
-    // actBox2();
-    timer();
-    // boxSwitch.push(1);
+  if (boxSwitch[1] == 1) {
+    button[1].classList.toggle("active");
+
     console.log("one");
   }
-  if (x == 2) {
-    // boxSwitch.push(2);
+  if (boxSwitch[2] == 2) {
+    button[2].classList.toggle("active");
+
     console.log("two");
-    timer();
-    // actBox3();
   }
-  if (x == 3) {
-    // boxSwitch.push(3);
+  if (boxSwitch[3] == 3) {
+    button[3].classList.toggle("active");
+
     console.log("three");
-    timer();
-    // actBox4();
   }
+  // timer();
 }
 
 one.addEventListener("click", function(e) {
