@@ -10,7 +10,18 @@ let four = document.querySelector(".four");
 var start = document.querySelector(".start-button");
 var reset = document.querySelector(".reset");
 var turnCounter = 0;
-console.log(button[0]);
+
+let t = 0;
+function timer() {
+  if (t < 7) {
+    button[0].classList.toggle("active");
+    button[1].classList.toggle("active");
+    button[2].classList.toggle("active");
+    button[3].classList.toggle("active");
+    t++;
+    setTimeout(timer, 900);
+  }
+}
 // function actBox1() {
 //   one.classList.add("active");
 //   // timer(actBox1);
@@ -42,12 +53,13 @@ console.log(button[0]);
 //make another for loop, with increasing timeout, with the index
 
 reset.addEventListener("click", function(e) {
-  boxSwitch = [];
-  boxCheck = [];
-  one.classList.remove("active");
-  two.classList.remove("active");
-  three.classList.remove("active");
-  four.classList.remove("active");
+  location.reload(true);
+  // boxSwitch = [];
+  // boxCheck = [];
+  // one.classList.remove("active");
+  // two.classList.remove("active");
+  // three.classList.remove("active");
+  // four.classList.remove("active");
   console.log("this is clicked");
 });
 //userinput and recursion
@@ -68,24 +80,28 @@ start.addEventListener("click", function(e) {
 
 function linkAttempt(x) {
   if (x == 0) {
-    actBox1();
+    // actBox1();
+    timer();
     // boxSwitch.push(0);
     console.log("zero");
   }
   if (x == 1) {
-    actBox2();
+    // actBox2();
+    timer();
     // boxSwitch.push(1);
     console.log("one");
   }
   if (x == 2) {
     // boxSwitch.push(2);
     console.log("two");
-    actBox3();
+    timer();
+    // actBox3();
   }
   if (x == 3) {
     // boxSwitch.push(3);
     console.log("three");
-    actBox4();
+    timer();
+    // actBox4();
   }
 }
 function addScore() {
@@ -100,7 +116,7 @@ function wrongAnswer() {
 function playerCheck() {
   if (boxSwitch.length > 2 && boxCheck.length > 2) {
     if (boxSwitch.indexOf(i) === boxCheck.indexOf(i)) {
-      // boxSwitch[i] === boxCheck[i]
+      // if (boxSwitch[i] === boxCheck[i]) {
       addScore();
       console.log("its a match");
       turnCounter += 1;
